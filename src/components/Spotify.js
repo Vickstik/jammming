@@ -1,4 +1,3 @@
-import React from 'react';
 const clientId = 'a927442c905f4b71a1a963774272a7e7';
 const redirectUri = 'http://localhost:3000/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
 let accessToken;
