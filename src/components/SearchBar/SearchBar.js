@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Spotify from '../Spotify';
+import './SearchBar.css';
+
 let accessToken
 function SearchBar(props) {
     const [term, setTerm] = useState('');

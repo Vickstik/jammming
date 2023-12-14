@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
-import tracks from '../Track/Track.js'
+import Track from '../Track/Track';
+
+import './Tracklist.css';
 
 function Tracklist(props) {
-    const [results, setResults] = useState([]);
-    //let tracks = results;
-    return(
-        tracks[0].name
-    )
+    /*return (
+    <div>
+        {props.tracks.map((track) => {
+            return(
+                <Track 
+                    track={track}
+                    key={track.id}
+                    onAdd={props.onAdd}
+                    isRemovable={props.isRemovable}
+                    onRemove={props.onRemove}
+                />
+            );
+        })}
+    </div>
+    )*/
 }
 
 export default Tracklist;

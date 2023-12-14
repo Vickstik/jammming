@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Tracklist from '../Tracklist/Tracklist.js'
+import './Playlist.css';
 
 function Playlist() {
     const [playlistName, setPlaylistName] = useState('');
