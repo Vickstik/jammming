@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 import Tracklist from '../Tracklist/Tracklist.js'
 import './Playlist.css';
 
-function Playlist() {
+function Playlist(props) {
     const [playlistName, setPlaylistName] = useState('');
     const [playlistTracks, setPlaylistTracks] = useState('');
-    function handleTracks(e) {
-        setPlaylistTracks(e.target.value)
-    }
+
     return (
         <div>
-            <label for='playlistName'>Rename your Playlist:</label>
+            <label for='playlistName'>Name your Playlist:</label>
             <input
+            id='playlistName'
+            name="playlistName"
             type="text"
             value={playlistName}
-            onChange={(e) => {setPlaylistName(e.target.value)}}
+
             />
             <div>
-                <button onClick={handleTracks} value='winter'><Tracklist /></button>
+                <Tracklist track={props.playlistTracks} isRemovable={true} removeTrack={props.removeTrack} />
             </div>
             <h2>{playlistName}</h2>
             <p>{playlistTracks}</p>

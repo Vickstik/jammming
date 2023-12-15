@@ -4,21 +4,21 @@ import Track from '../Track/Track';
 import './Tracklist.css';
 
 function Tracklist(props) {
-    /*return (
+    return (
     <div>
-        {props.tracks.map((track) => {
+        {props.track.map((track) => {
             return(
                 <Track 
                     track={track}
                     key={track.id}
-                    onAdd={props.onAdd}
+                    addTrack={props.addTrack}
                     isRemovable={props.isRemovable}
-                    onRemove={props.onRemove}
+                    removeTrack={props.removeTrack}
                 />
             );
         })}
     </div>
-    )*/
+    )
 }
 
 export default Tracklist;

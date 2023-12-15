@@ -7,14 +7,13 @@ function SearchBar(props) {
     function handleTermChange(e) {
         setTerm(e.target.value)
     }
-    function handleOnSearch() {}
-        return (
+
+    return (
         <div>
-            <input placeholder="Find song by title" onChange={handleTermChange} value={term} />
-            <button onClick={handleOnSearch}>SEARCH</button>
-            <p></p>
+            <input placeholder="Find song by title" onChange={handleTermChange} />
+            <button onClick={props.search}>SEARCH</button>
         </div>
-        );
+    );
 }
 
 export default SearchBar;

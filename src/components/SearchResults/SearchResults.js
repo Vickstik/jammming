@@ -4,8 +4,9 @@ import Tracklist from '../Tracklist/Tracklist';
 function SearchResults(props) {
     return (
         <Tracklist
-        tracks={props.searchResults}
-        onAdd={props.onAdd}
+        track={props.searchResults}
+        addTrack={props.addTrack}
+        isRemovable={false}
         />
     );
 }
