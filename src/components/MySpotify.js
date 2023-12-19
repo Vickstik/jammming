@@ -1,5 +1,5 @@
 const clientID = 'a927442c905f4b71a1a963774272a7e7';
-const redirectURI = 'http://localhost:3000/';
+const redirectURI = 'https://jammming-vickstik.netlify.app/';
 let accessToken;
 
 const Spotify = {
