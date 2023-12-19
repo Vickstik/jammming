@@ -5,15 +5,15 @@ import './Tracklist.css';
 
 function Tracklist(props) {
     return (
-    <div>
-        {props.track.map((track) => {
+    <div className="Tracklist">
+        {props.tracks.map((track) => {
             return(
                 <Track 
                     track={track}
                     key={track.id}
-                    addTrack={props.addTrack}
+                    onAdd={props.onAdd}
                     isRemovable={props.isRemovable}
-                    removeTrack={props.removeTrack}
+                    onRemove={props.onRemove}
                 />
             );
         })}

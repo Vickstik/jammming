@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import './SearchBar.css';
 
-let accessToken
 function SearchBar(props) {
-    const [term, setTerm] = useState('');
-    function handleTermChange(e) {
-        setTerm(e.target.value)
+    const [input, setInput] = useState('');
+    const search = () => {
+        props.onSearch(input);
     }
-
+    const handleChange = (event) => {
+        setInput(event.target.value);
+    }
     return (
-        <div>
-            <input placeholder="Find song by title" onChange={handleTermChange} />
-            <button onClick={props.search}>SEARCH</button>
+        <div className="SearchBar">
+            <input 
+                placeholder="Enter a song, artist or album"
+                onChange={handleChange}
+                onFocus={(e)=>e.target.select()} />
+            <button className="SearchButton" onClick={search}>Search</button>
         </div>
-    );
+    )
 }
 
 export default SearchBar;

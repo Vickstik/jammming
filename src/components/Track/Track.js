@@ -2,30 +2,31 @@ import React from 'react';
 import './Track.css';
 
 function Track(props) {
-    const handleAddClick = () => {
-        props.addTrack(props.track);
+    const addTrack = () => {
+        props.onAdd(props.track);
     }
-    const handleRemoveClick = () => {
-        props.removeTrack(props.track);
+    const removeTrack = () => {
+        props.onRemove(props.track);
     }
     const chooseButton = () => {
         if(props.isRemovable) {
             return (
-                <button onClick={handleRemoveClick}>-</button>
+                <button className="Track-action" onClick={removeTrack}>-</button>
             )
         }
         return (
-            <button onClick={handleAddClick}>+</button>
+            <button className="Track-action" onClick={addTrack}>+</button>
         )
     }
     return (
         <>
-        <div>
-            <div>
+        <div className="Track">
+            <div className="Track-information">
+            <img className='Track-image' alt='The track cover' src={props.track.image}/>
                 <h3>Title: {props.track.name}</h3>
                 <p>Artist: {props.track.artist} | Album: {props.track.album}</p>
             </div>
-        {chooseButton}
+        {chooseButton()}
         </div>
         </>
     )
